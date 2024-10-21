@@ -22,7 +22,7 @@ class Challenges
         var response = Console.ReadLine();
         if (response == "Functions")
         {
-            Console.WriteLine("Plus\nConvert\nAddOne\nPower Of Curcuit\nAgeCalc\nTriARea\nTrue Or False");
+            Console.WriteLine("Plus\nConvert\nAddOne\nPower Of Curcuit\nAgeCalc\nTriARea\nTrue Or False\n");
             Start();
         }
         else if (response == "Plus")
@@ -78,7 +78,7 @@ class Challenges
 
             Console.WriteLine("If I convert " + years + " years to days. I get " + CalcAge(yearsToUse) + ".");
         }
-        else if (response == "TriARea")
+        else if (response == "TriArea")
         {
             // CHALLENGE 6 //
 
