@@ -18,11 +18,11 @@ class Challenges
         
 
         //Welcome the user to my program//
-        Console.WriteLine("Please choose a function \n To see a list of all functions, please type 'Functions'");
+        Console.WriteLine("Please choose a function \n To see a list of all functions, please type 'Functions'\n To exit out of this program, type in 'Finito'");
         var response = Console.ReadLine();
         if (response == "Functions")
         {
-            Console.WriteLine("Plus\nConvert\nAddOne\nPower Of Curcuit\nAgeCalc\nTriARea\nTrue Or False\n");
+            Console.WriteLine("Plus\nConvert\nAddOne\nPower Of Curcuit\nAgeCalc\nTriARea\nTrue Or False\nSum True or False\n");
             Start();
         }
         else if (response == "Plus")
@@ -99,12 +99,30 @@ class Challenges
             int number5ToUse = int.Parse(number5);
             Console.WriteLine("If " + number5 + " is used " + ", the result is " + lessThanOrEqualToZero(number5ToUse) + ".");
         }
+        else if (response == "Sum True or False")
+        {
+            // CHALLENGE 8 //
+
+            Console.WriteLine("Perfect, now we are going to find out whether sum you put in will be true or false. \n Please enter a random number.");
+            var number5 = Console.ReadLine();
+            int number5ToUse = int.Parse(number5);
+            Console.WriteLine(" Okay Please enter another number.");
+            var number6 = Console.ReadLine();
+            int number6ToUse = int.Parse(number6);
+            Console.WriteLine("If " + number5 + " is used " + ", the result is " + lessThan100(number5ToUse, number6ToUse) + ".");
+        }
+
+        else if (response == "Finito")
+        {
+            return;
+        }
         else
         {
             Console.WriteLine("This is not a valid Function.");
             
         }
         Start();
+        
 
     }
 
@@ -139,6 +157,10 @@ class Challenges
     {
         return number5 <= 0;
         
+    }
+    public static bool lessThan100(float number5, float number6)
+    {
+        return number5 + number6 < 100;
     }
 }
 
