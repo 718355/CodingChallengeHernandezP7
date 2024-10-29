@@ -22,7 +22,7 @@ class Challenges
         var response = Console.ReadLine();
         if (response == "Functions")
         {
-            Console.WriteLine("Plus\nConvert\nAddOne\nPower Of Curcuit\nAgeCalc\nTriARea\nTrue Or False\nSum True or False\n");
+            Console.WriteLine("Plus\nConvert\nAddOne\nPower Of Curcuit\nAgeCalc\nTriARea\nTrue Or False\nSum True or False\n2IntTF\n");
             Start();
         }
         else if (response == "Plus")
@@ -111,6 +111,18 @@ class Challenges
             int number6ToUse = int.Parse(number6);
             Console.WriteLine("If " + number5 + " is used " + ", the result is " + lessThan100(number5ToUse, number6ToUse) + ".");
         }
+        else if (response == "2IntTF")
+        {
+            // CHALLENGE 9 //
+
+            Console.WriteLine("Okay, now we are going to find out whether two integers you enter will be true or false. \n Please enter a random number.");
+            var number5 = Console.ReadLine();
+            int number5ToUse = int.Parse(number5);
+            Console.WriteLine("Okay, Please enter another number.");
+            var number6 = Console.ReadLine();
+            int number6ToUse = int.Parse(number6);
+            Console.WriteLine("If " + number5 + " and " + number6 + " is used the result is " + IsEqual(number5ToUse, number6ToUse) + ".");
+        }
 
         else if (response == "Finito")
         {
@@ -161,6 +173,10 @@ class Challenges
     public static bool lessThan100(float number5, float number6)
     {
         return number5 + number6 < 100;
+    }
+    public static bool IsEqual(int number5, int number6)
+    {
+        return number5 == number6;
     }
 }
 
