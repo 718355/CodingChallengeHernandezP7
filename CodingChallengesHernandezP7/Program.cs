@@ -22,7 +22,7 @@ class Challenges
         var response = Console.ReadLine();
         if (response == "Functions")
         {
-            Console.WriteLine("Plus\nConvert\nAddOne\nPower Of Curcuit\nAgeCalc\nTriARea\nTrue Or False\nSum True or False\n2IntTF\n");
+            Console.WriteLine("Plus\nConvert\nAddOne\nPower Of Curcuit\nAgeCalc\nTriARea\nTrue Or False\nSum True or False\n2IntTF\nSomething\n");
             Start();
         }
         else if (response == "Plus")
@@ -123,6 +123,15 @@ class Challenges
             int number6ToUse = int.Parse(number6);
             Console.WriteLine("If " + number5 + " and " + number6 + " is used the result is " + IsEqual(number5ToUse, number6ToUse) + ".");
         }
+        else if (response == "Something")
+        {
+            // CHALLENGE 10 //
+
+            Console.WriteLine("Okay, now we are going to use the something simulator\n Please enter a random sentence.");
+            string responsej = Console.ReadLine();
+            Console.WriteLine(GiveMeSomething(responsej) + ".");
+
+        }
 
         else if (response == "Finito")
         {
@@ -177,6 +186,10 @@ class Challenges
     public static bool IsEqual(int number5, int number6)
     {
         return number5 == number6;
+    }
+    public static string GiveMeSomething(string input)
+    {
+        return ("something " + input);
     }
 }
 
