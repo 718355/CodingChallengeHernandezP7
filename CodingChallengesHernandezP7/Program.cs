@@ -132,14 +132,15 @@ class Challenges
             Console.WriteLine(GiveMeSomething(responsej) + ".");
 
         }
-        else if (response "Reverse Bool")
+        else if (response == "Reverse Bool")
         {
-            // CHALLENGE 10 //
+            // CHALLENGE 11 //
 
 
             Console.WriteLine("We are going to reverse any boolean value\n Please enter either true or false.");
-            var response = Console.ReadLine();
-            Console.WriteLine(Reverse (response) + ".");
+            var responseh = Console.ReadLine();
+            bool responseToUse = bool.Parse(responseh);
+            Console.WriteLine(Reverse(responseToUse) + ".");
 
         }
 
@@ -201,9 +202,9 @@ class Challenges
     {
         return ("something " + input);
     }
-    public static string Reverse(string input)
+    public static bool Reverse(bool input)
     {
-        return (Reverse "Response" )
+        return !input;
     }
 }
 
