@@ -22,7 +22,7 @@ class Challenges
         var response = Console.ReadLine();
         if (response == "Functions")
         {
-            Console.WriteLine("Plus\nConvert\nAddOne\nPower Of Curcuit\nAgeCalc\nTriARea\nTrue Or False\nSum True or False\n2IntTF\nSomething\n");
+            Console.WriteLine("Plus\nConvert\nAddOne\nPower Of Curcuit\nAgeCalc\nTriARea\nTrue Or False\nSum True or False\n2IntTF\nSomething\nReverse Bool\n");
             Start();
         }
         else if (response == "Plus")
@@ -132,6 +132,16 @@ class Challenges
             Console.WriteLine(GiveMeSomething(responsej) + ".");
 
         }
+        else if (response "Reverse Bool")
+        {
+            // CHALLENGE 10 //
+
+
+            Console.WriteLine("We are going to reverse any boolean value\n Please enter either true or false.");
+            var response = Console.ReadLine();
+            Console.WriteLine(Reverse (response) + ".");
+
+        }
 
         else if (response == "Finito")
         {
@@ -190,6 +200,10 @@ class Challenges
     public static string GiveMeSomething(string input)
     {
         return ("something " + input);
+    }
+    public static string Reverse(string input)
+    {
+        return (Reverse "Response" )
     }
 }
 
