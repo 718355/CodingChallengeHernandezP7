@@ -22,7 +22,7 @@ class Challenges
         var response = Console.ReadLine();
         if (response == "Functions")
         {
-            Console.WriteLine("Plus\nConvert\nAddOne\nPower Of Curcuit\nAgeCalc\nTriARea\nTrue Or False\nSum True or False\n2IntTF\nSomething\nReverse Bool\n");
+            Console.WriteLine("Plus\nConvert\nAddOne\nPower Of Curcuit\nAgeCalc\nTriARea\nTrue Or False\nSum True or False\n2IntTF\nSomething\nReverse Bool\nHours To Sec");
             Start();
         }
         else if (response == "Plus")
@@ -143,6 +143,15 @@ class Challenges
             Console.WriteLine(Reverse(responseToUse) + ".");
 
         }
+        else if (response == "Hours To Sec")
+        {
+            // CHALLENGE 12 //
+
+            Console.WriteLine("Beautiful, now we are going to convert hours to seconds. \n Please a number for hour.");
+            var hours = Console.ReadLine();
+            float hoursToUse = float.Parse(hours);
+            Console.WriteLine(" If I convert " + hours + " hours to seconds. I get " + howmanySeconds(hoursToUse) + " seconds. ");
+        }
 
         else if (response == "Finito")
         {
@@ -205,6 +214,10 @@ class Challenges
     public static bool Reverse(bool input)
     {
         return !input;
+    }
+    public static float howmanySeconds(float hours)
+    {
+        return hours * 3600;
     }
 }
 
