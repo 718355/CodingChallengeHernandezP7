@@ -155,22 +155,27 @@ class Challenges
         else if (response == "PolygonAngle")
         {
             // CHALLENGE 13 //
-
-            Console.WriteLine("Okay, now we are going find the total sum of internal angles(Degrees). \n Please .");
-            var InputSides = Console.ReadLine();
-            int sides = int.Parse();
-            Console.WriteLine(" If this number is used " + InputSides + " . The polygon's sides are " + SumPolygon(InputSides) + ".");
+            Console.WriteLine("Okay, now we are going find the total sum of internal angles from a certain amount of sides. \n Please input a number of sides.");
+            bool cow = false;
+            while (!cow)
+            {
+                var InputSides = Console.ReadLine();
+                int sides = int.Parse(InputSides);
+                if (sides >= 3)
+                {
+                    Console.WriteLine(" If this number is used " + InputSides + " . The polygon's angles are " + SumPolygon(sides) + ".");
+                    cow = true;
+                }
+                else
+                {
+                    Console.WriteLine("This isn't valid as a polygon can't have less than 3 sides. ");
+                }
+            }
+            
+            
+            
             
         }
-        else if (response == < 3)
-            {
-                return;
-            }
-            else
-            {
-                Console.WriteLine("This is not valid since a polygon can't have less than 3 sides")
-            }
-        
 
         else if (response == "Finito")
         {
@@ -240,7 +245,7 @@ class Challenges
     }
     public static int SumPolygon(int sides)
     {
-        return (sides -2) * 120
+        return (sides - 2) * 180;
     }
 }
 
