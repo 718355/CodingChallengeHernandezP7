@@ -22,7 +22,7 @@ class Challenges
         var response = Console.ReadLine();
         if (response == "Functions")
         {
-            Console.WriteLine("Plus\nConvert\nAddOne\nPower Of Curcuit\nAgeCalc\nTriARea\nTrue Or False\nSum True or False\n2IntTF\nSomething\nReverse Bool\nHours To Sec");
+            Console.WriteLine("Plus\nConvert\nAddOne\nPower Of Curcuit\nAgeCalc\nTriARea\nTrue Or False\nSum True or False\n2IntTF\nSomething\nReverse Bool\nHours To Sec\nPolygonAngle\n");
             Start();
         }
         else if (response == "Plus")
@@ -152,6 +152,25 @@ class Challenges
             float hoursToUse = float.Parse(hours);
             Console.WriteLine(" If I convert " + hours + " hours to seconds. I get " + howmanySeconds(hoursToUse) + " seconds. ");
         }
+        else if (response == "PolygonAngle")
+        {
+            // CHALLENGE 13 //
+
+            Console.WriteLine("Okay, now we are going find the total sum of internal angles(Degrees). \n Please .");
+            var InputSides = Console.ReadLine();
+            int sides = int.Parse();
+            Console.WriteLine(" If this number is used " + InputSides + " . The polygon's sides are " + SumPolygon(InputSides) + ".");
+            
+        }
+        else if (response == < 3)
+            {
+                return;
+            }
+            else
+            {
+                Console.WriteLine("This is not valid since a polygon can't have less than 3 sides")
+            }
+        
 
         else if (response == "Finito")
         {
@@ -218,6 +237,10 @@ class Challenges
     public static float howmanySeconds(float hours)
     {
         return hours * 3600;
+    }
+    public static int SumPolygon(int sides)
+    {
+        return (sides -2) * 120
     }
 }
 
