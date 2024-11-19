@@ -171,19 +171,20 @@ class Challenges
                     Console.WriteLine("This isn't valid as a polygon can't have less than 3 sides. ");
                 }
             }
-            else if (response == "nameString")
-            {
-                // CHALLENGE 14 //
-
-                Console.WriteLine("Okay going to fix a code using a string name with the string edabit. \n Please enter an input.");
-                var hours = Console.ReadLine();
-                float hoursToUse = float.Parse(hours);
-                Console.WriteLine(" If " + hours + " hours to seconds. I get " + howmanySeconds(hoursToUse) + " seconds. ");
-
 
 
 
             }
+        else if (response == "nameString")
+        {
+            // CHALLENGE 14 //
+
+            Console.WriteLine("Okay going to fix a code using a string name plus the string edabit. \n Please enter an input.");
+            var nameString = Console.ReadLine();
+            int nameStringToUse = int.Parse();
+            Console.WriteLine(" If " + nameString + " is used. I get " + nameString(nameString) + " . ");
+        }
+
 
 
         else if (response == "Finito")
@@ -256,11 +257,9 @@ class Challenges
     {
         return (sides - 2) * 180;
     }
-    public static string nameString(string name)
+    public static string nameString(string nameString, string result)
     {
-        string rersult = name + " Edabit ";
-
-        return result;
+        return result == nameString + " Edabit ";
     }
 }
 
