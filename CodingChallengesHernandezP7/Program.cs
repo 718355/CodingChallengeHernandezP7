@@ -22,7 +22,7 @@ class Challenges
         var response = Console.ReadLine();
         if (response == "Functions")
         {
-            Console.WriteLine("Plus\nConvert\nAddOne\nPower Of Curcuit\nAgeCalc\nTriARea\nTrue Or False\nSum True or False\n2IntTF\nSomething\nReverse Bool\nHours To Sec\nPolygonAngle\n");
+            Console.WriteLine("Plus\nConvert\nAddOne\nPower Of Curcuit\nAgeCalc\nTriARea\nTrue Or False\nSum True or False\n2IntTF\nSomething\nReverse Bool\nHours To Sec\nPolygonAngle\nnameString\nTrueTrueTrue\n");
             Start();
         }
         else if (response == "Plus")
@@ -180,9 +180,22 @@ class Challenges
             // CHALLENGE 14 //
 
             Console.WriteLine("Okay going to fix a code using a string name plus the string edabit. \n Please enter an input.");
-            var nameString = Console.ReadLine();
-            int nameStringToUse = int.Parse();
-            Console.WriteLine(" If " + nameString + " is used. I get " + nameString(nameString) + " . ");
+            string nameString = Console.ReadLine();
+            Console.WriteLine(" If " + nameString + " is used. I get " + nameStringH(nameString) + " . ");
+        }
+        else if (response == "TrueTrueTrue")
+        {
+            // Challenge 15 //
+            Console.WriteLine("Nice, now we are going to use the operator to determine if two boolean values are true. Please type in true or false.");
+            var Response5 = Console.ReadLine();
+            bool bool1 = bool.Parse(Response5);
+            Console.WriteLine("Now enter the second input for the second half to figure out if its right.");
+            var Response2 = Console.ReadLine();
+            bool bool2 = bool.Parse(Response2);
+            Console.WriteLine(And(bool1, bool2));
+            Console.WriteLine(" And(" + bool1 + "," + bool2 + ")  -> " + And(bool1, bool2));
+
+
         }
 
 
@@ -257,9 +270,21 @@ class Challenges
     {
         return (sides - 2) * 180;
     }
-    public static string nameString(string nameString, string result)
+    public static string nameStringH(string nameString)
     {
-        return result == nameString + " Edabit ";
+        return nameString + " Edabit";
+    }
+    public static bool And(bool t, bool f)
+    {
+        if (t && f)
+        {
+            return true;
+
+        }
+        else
+        {
+            return false;
+        }
     }
 }
 
