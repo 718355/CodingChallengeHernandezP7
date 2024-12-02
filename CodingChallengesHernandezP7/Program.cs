@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel.Design;
 using System.Runtime.CompilerServices;
+using System.Runtime.ConstrainedExecution;
 using System.Security.Cryptography.X509Certificates;
 class Challenges
 {
@@ -22,7 +23,7 @@ class Challenges
         var response = Console.ReadLine();
         if (response == "Functions")
         {
-            Console.WriteLine("Plus\nConvert\nAddOne\nPower Of Curcuit\nAgeCalc\nTriARea\nTrue Or False\nSum True or False\n2IntTF\nSomething\nReverse Bool\nHours To Sec\nPolygonAngle\nnameString\nTrueTrueTrue\n");
+            Console.WriteLine("Plus\nConvert\nAddOne\nPower Of Curcuit\nAgeCalc\nTriARea\nTrue Or False\nSum True or False\n2IntTF\nSomething\nReverse Bool\nHours To Sec\nPolygonAngle\nnameString\nTrueTrueTrue\nCalcPoint\n");
             Start();
         }
         else if (response == "Plus")
@@ -197,6 +198,22 @@ class Challenges
 
 
         }
+        else if (response == "CalcPoint")
+        {
+            // Challenge 16 //
+            Console.WriteLine("Okay, we now are going to calculate the number of 3-pointers and 2-pointers scored to find the final points, Please enter a number op two-pointers.");
+            var number7 = Console.ReadLine();
+
+            int numberToUse7 = int.Parse(number7);
+
+            Console.WriteLine("Now enter the second number of 3 pointers.");
+
+            var number8 = Console.ReadLine();
+
+            int numberToUse8 = int.Parse(number8);
+
+            Console.WriteLine(" points ( " + number7 + ", " + number8 +  ") --> " + CalcPoint(numberToUse7, numberToUse8));
+        }
 
 
 
@@ -285,6 +302,10 @@ class Challenges
         {
             return false;
         }
+    }
+    public static int CalcPoint(int number7, int number8)
+    {
+        return number7 * 2 + number8 * 3;
     }
 }
 
