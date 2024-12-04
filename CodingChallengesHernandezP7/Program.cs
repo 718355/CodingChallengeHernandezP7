@@ -23,7 +23,7 @@ class Challenges
         var response = Console.ReadLine();
         if (response == "Functions")
         {
-            Console.WriteLine("Plus\nConvert\nAddOne\nPower Of Curcuit\nAgeCalc\nTriARea\nTrue Or False\nSum True or False\n2IntTF\nSomething\nReverse Bool\nHours To Sec\nPolygonAngle\nnameString\nTrueTrueTrue\nCalcPoint\n");
+            Console.WriteLine("Plus\nConvert\nAddOne\nPower Of Curcuit\nAgeCalc\nTriARea\nTrue Or False\nSum True or False\n2IntTF\nSomething\nReverse Bool\nHours To Sec\nPolygonAngle\nnameString\nTrueTrueTrue\nCalcPoint\nCalcPerimeter\n");
             Start();
         }
         else if (response == "Plus")
@@ -214,6 +214,19 @@ class Challenges
 
             Console.WriteLine(" points ( " + number7 + ", " + number8 +  ") --> " + CalcPoint(numberToUse7, numberToUse8));
         }
+        // Challenge 17 //
+        Console.WriteLine("Okay, we now are going to calculate the number of 3-pointers and 2-pointers scored to find the final points, Please enter a number op two-pointers.");
+        var number9 = Console.ReadLine();
+
+        int numberToUse9 = int.Parse(number9);
+
+        Console.WriteLine("Now enter the second number of 3 pointers.");
+
+        var number10 = Console.ReadLine();
+
+        int numberToUse10 = int.Parse(number10);
+
+        Console.WriteLine(" Perimeter ( " + number9 + ", " + number10 + ") --> " + CalcPerimeter(numberToUse9, numberToUse10));
 
 
 
@@ -306,6 +319,10 @@ class Challenges
     public static int CalcPoint(int number7, int number8)
     {
         return number7 * 2 + number8 * 3;
+    }
+    public static int CalcPerimeter(int number9, int number10)
+    {
+        return number9 + number10 * 2;
     }
 }
 
