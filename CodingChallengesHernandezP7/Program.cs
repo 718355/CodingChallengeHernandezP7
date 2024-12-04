@@ -214,19 +214,22 @@ class Challenges
 
             Console.WriteLine(" points ( " + number7 + ", " + number8 +  ") --> " + CalcPoint(numberToUse7, numberToUse8));
         }
-        // Challenge 17 //
-        Console.WriteLine("Okay, we now are going to calculate the number of 3-pointers and 2-pointers scored to find the final points, Please enter a number op two-pointers.");
-        var number9 = Console.ReadLine();
+        else if (response == "CalcPerimeter")
+        {
+            // Challenge 17 //
+            Console.WriteLine("Okay, we now are going to calculate the perimeter of a rectangle based on length and width, Please enter a number for length.");
+            var number9 = Console.ReadLine();
 
-        int numberToUse9 = int.Parse(number9);
+            int numberToUse9 = int.Parse(number9);
 
-        Console.WriteLine("Now enter the second number of 3 pointers.");
+            Console.WriteLine("Now enter the second number of width.");
 
-        var number10 = Console.ReadLine();
+            var number10 = Console.ReadLine();
 
-        int numberToUse10 = int.Parse(number10);
+            int numberToUse10 = int.Parse(number10);
 
-        Console.WriteLine(" Perimeter ( " + number9 + ", " + number10 + ") --> " + CalcPerimeter(numberToUse9, numberToUse10));
+            Console.WriteLine(" Perimeter ( " + number9 + ", " + number10 + ") --> " + CalcPerimeter(numberToUse9, numberToUse10));
+        }
 
 
 
@@ -322,7 +325,7 @@ class Challenges
     }
     public static int CalcPerimeter(int number9, int number10)
     {
-        return number9 + number10 * 2;
+        return (number9 + number10) * 2;
     }
 }
 
