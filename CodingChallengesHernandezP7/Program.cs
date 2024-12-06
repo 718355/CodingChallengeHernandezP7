@@ -23,7 +23,8 @@ class Challenges
         var response = Console.ReadLine();
         if (response == "Functions")
         {
-            Console.WriteLine("Plus\nConvert\nAddOne\nPower Of Curcuit\nAgeCalc\nTriARea\nTrue Or False\nSum True or False\n2IntTF\nSomething\nReverse Bool\nHours To Sec\nPolygonAngle\nnameString\nTrueTrueTrue\nCalcPoint\nCalcPerimeter\n");
+            Console.WriteLine("Plus\nConvert\nAddOne\nPower Of Curcuit\nAgeCalc\nTriARea\nTrue Or False\nSum True or False\n2IntTF\nSomething\nReverse Bool\nHours To Sec\nPolygonAngle\nnameString" +
+                "\nTrueTrueTrue\nCalcPoint\nCalcPerimeter\nHelloName\n");
             Start();
         }
         else if (response == "Plus")
@@ -175,7 +176,7 @@ class Challenges
 
 
 
-            }
+        }
         else if (response == "nameString")
         {
             // CHALLENGE 14 //
@@ -212,7 +213,7 @@ class Challenges
 
             int numberToUse8 = int.Parse(number8);
 
-            Console.WriteLine(" points ( " + number7 + ", " + number8 +  ") --> " + CalcPoint(numberToUse7, numberToUse8));
+            Console.WriteLine(" points ( " + number7 + ", " + number8 + ") --> " + CalcPoint(numberToUse7, numberToUse8));
         }
         else if (response == "CalcPerimeter")
         {
@@ -229,6 +230,12 @@ class Challenges
             int numberToUse10 = int.Parse(number10);
 
             Console.WriteLine(" Perimeter ( " + number9 + ", " + number10 + ") --> " + CalcPerimeter(numberToUse9, numberToUse10));
+        }
+        else if (response == "HelloName")
+        {
+            Console.WriteLine("Nice, now we are going to add Hello to the end of whatever you input. Please input a name of other word.");
+            string number11 = Console.ReadLine();
+            Console.WriteLine(" HelloName (" + number11 + ") --> " + ( "Hello" + number11));
         }
 
 
@@ -326,6 +333,10 @@ class Challenges
     public static int CalcPerimeter(int number9, int number10)
     {
         return (number9 + number10) * 2;
+    }
+    public static string HelloName(string number11)
+    {
+        return "Hello" + number11;
     }
 }
 
