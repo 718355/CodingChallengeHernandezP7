@@ -24,7 +24,7 @@ class Challenges
         if (response == "Functions")
         {
             Console.WriteLine("Plus\nConvert\nAddOne\nPower Of Curcuit\nAgeCalc\nTriARea\nTrue Or False\nSum True or False\n2IntTF\nSomething\nReverse Bool\nHours To Sec\nPolygonAngle\nnameString" +
-                "\nTrueTrueTrue\nCalcPoint\nCalcPerimeter\nHelloName\n");
+                "\nTrueTrueTrue\nCalcPoint\nCalcPerimeter\nHelloName\nanimals\n");
             Start();
         }
         else if (response == "Plus")
@@ -217,7 +217,7 @@ class Challenges
         }
         else if (response == "CalcPerimeter")
         {
-            // Challenge 17 //
+            // Challenge 18 //
             Console.WriteLine("Okay, we now are going to calculate the perimeter of a rectangle based on length and width, Please enter a number for length.");
             var number9 = Console.ReadLine();
 
@@ -235,7 +235,29 @@ class Challenges
         {
             Console.WriteLine("Nice, now we are going to add Hello to the end of whatever you input. Please input a name of other word.");
             string number11 = Console.ReadLine();
-            Console.WriteLine(" HelloName (" + number11 + ") --> " + ( "Hello" + number11));
+            Console.WriteLine(" HelloName (" + number11 + ") --> " + ( "Hello " + number11));
+        }
+        else if (response == "animals")
+        {
+            // Challenge 19 //
+            Console.WriteLine("Okay, we now are going to calculate the number of legs of random animals, Please enter a number for the legs of chickens.");
+            var number12 = Console.ReadLine();
+
+            int numberToUse12 = int.Parse(number12);
+
+            Console.WriteLine("Now enter the legs for cows.");
+
+            var number13 = Console.ReadLine();
+
+            int numberToUse13 = int.Parse(number13);
+
+            Console.WriteLine("Now enter the legs for the pigs.");
+
+            var number14 = Console.ReadLine();
+
+            int numberToUse14 = int.Parse(number14);
+
+            Console.WriteLine(" animals ( " + number12 + ", " + number13 + ", " + number14 + ", ) --> " + animals(numberToUse12, numberToUse13, numberToUse14));
         }
 
 
@@ -336,7 +358,11 @@ class Challenges
     }
     public static string HelloName(string number11)
     {
-        return "Hello" + number11;
+        return " Hello " +  number11;
+    }
+    public static int animals(int number12, int number13, int number14)
+    {
+        return number12 * 2 + number13 * 4 + number14 * 4;
     }
 }
 
