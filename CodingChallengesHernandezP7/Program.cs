@@ -24,7 +24,7 @@ class Challenges
         if (response == "Functions")
         {
             Console.WriteLine("Plus\nConvert\nAddOne\nPower Of Curcuit\nAgeCalc\nTriARea\nTrue Or False\nSum True or False\n2IntTF\nSomething\nReverse Bool\nHours To Sec\nPolygonAngle\nnameString" +
-                "\nTrueTrueTrue\nCalcPoint\nCalcPerimeter\nHelloName\nanimals\n");
+                "\nTrueTrueTrue\nCalcPoint\nCalcPerimeter\nHelloName\nanimals\nBallPoint\n");
             Start();
         }
         else if (response == "Plus")
@@ -259,6 +259,31 @@ class Challenges
 
             Console.WriteLine(" animals ( " + number12 + ", " + number13 + ", " + number14 + ", ) --> " + animals(numberToUse12, numberToUse13, numberToUse14));
         }
+        else if (response == "BallPoint")
+        {
+            // Challenge 20 //
+            Console.WriteLine("Okay, we now are going to calculate the number of wins you can get when enter a number of draws and losses. PLease enter a number of wins.");
+            var number15 = Console.ReadLine();
+
+            int numberToUse15 = int.Parse(number15);
+
+            Console.WriteLine("Now enter the number of draws.");
+
+            var number16 = Console.ReadLine();
+
+            int numberToUse16 = int.Parse(number16);
+
+            Console.WriteLine("Now enter the losses.");
+
+            var number17 = Console.ReadLine();
+
+            int numberToUse17 = int.Parse(number17);
+
+            Console.WriteLine(" FootballPoints ( " + number15 + ", " + number16 + ", " + number17 + ", ) --> " + FootballPoint(numberToUse15, numberToUse16, numberToUse17));
+            
+            
+        }
+        
 
 
 
@@ -363,6 +388,10 @@ class Challenges
     public static int animals(int number12, int number13, int number14)
     {
         return number12 * 2 + number13 * 4 + number14 * 4;
+    }
+    public static int FootballPoint(int number15, int number16, int number17)
+    {
+        return number15 * 3 + number16 * 1 + number17 * 0;
     }
 }
 
