@@ -3,6 +3,7 @@ using System.ComponentModel.Design;
 using System.Runtime.CompilerServices;
 using System.Runtime.ConstrainedExecution;
 using System.Security.Cryptography.X509Certificates;
+using Microsoft.VisualBasic;
 class Challenges
 {
 
@@ -24,7 +25,7 @@ class Challenges
         if (response == "Functions")
         {
             Console.WriteLine("Plus\nConvert\nAddOne\nPower Of Curcuit\nAgeCalc\nTriARea\nTrue Or False\nSum True or False\n2IntTF\nSomething\nReverse Bool\nHours To Sec\nPolygonAngle\nnameString" +
-                "\nTrueTrueTrue\nCalcPoint\nCalcPerimeter\nHelloName\nanimals\nBallPoint\n");
+                "\nTrueTrueTrue\nCalcPoint\nCalcPerimeter\nHelloName\nanimals\nBallPoint\nMonthName\n");
             Start();
         }
         else if (response == "Plus")
@@ -281,9 +282,44 @@ class Challenges
 
             Console.WriteLine(" FootballPoints ( " + number15 + ", " + number16 + ", " + number17 + ", ) --> " + FootballPoint(numberToUse15, numberToUse16, numberToUse17));
             
-            
-        }
         
+        }
+        else if (response == "MonthName")
+        {
+            // Challenge 21 //
+            Console.WriteLine(" We now are going to use the months calculation. PLease enter a number 1 to 12. ");
+            int monthInt = 1;
+
+            bool valid1 = false;
+            while (!valid1)
+            {
+                var superS = Console.ReadLine();
+                if (int.TryParse(superS, out _))
+                {
+                    int car = int.Parse(superS);
+                    if (car > 0 && car <= 12) 
+                    
+                    {
+                        valid1 = true;
+                        monthInt = car;
+                    }
+                    else
+                    {
+                        Console.WriteLine(" This is not 1 to 12, try again.");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine(" This is not 1 to 12, try again.");
+
+                }
+
+            }
+            Console.WriteLine(" Challenge 1 MonthName(" + monthInt + ") is: " + MonthName(monthInt));
+
+
+        }
+
 
 
 
@@ -392,6 +428,10 @@ class Challenges
     public static int FootballPoint(int number15, int number16, int number17)
     {
         return number15 * 3 + number16 * 1 + number17 * 0;
+    }
+    public static string MonthName(int M)
+    {
+        return DateAndTime.MonthName(M);
     }
 }
 
