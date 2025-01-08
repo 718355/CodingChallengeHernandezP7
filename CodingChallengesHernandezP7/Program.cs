@@ -25,7 +25,7 @@ class Challenges
         if (response == "Functions")
         {
             Console.WriteLine("Plus\nConvert\nAddOne\nPower Of Curcuit\nAgeCalc\nTriARea\nTrue Or False\nSum True or False\n2IntTF\nSomething\nReverse Bool\nHours To Sec\nPolygonAngle\nnameString" +
-                "\nTrueTrueTrue\nCalcPoint\nCalcPerimeter\nHelloName\nanimals\nBallPoint\nMonthName\n");
+                "\nTrueTrueTrue\nCalcPoint\nCalcPerimeter\nHelloName\nanimals\nBallPoint\nMonthName\nMINMAX\n");
             Start();
         }
         else if (response == "Plus")
@@ -319,7 +319,33 @@ class Challenges
 
 
         }
+        else if (response == "MINMAX")
+        {
+            // Challenge 22 //
+            Console.WriteLine(" We now are going to find the min and max numbers from the numbers you input. Please enter a bunch of numbers with commaas between each. ");
+            int MMInt = 1;
 
+            bool valid1 = false;
+            while (!valid1)
+            {
+                var superS = Console.ReadLine();
+                if (int.TryParse(superS, out _))
+                {
+                    int car = int.Parse(superS);
+                    if (car > 0)
+
+                    {
+                        valid1 = true;
+                        MMInt = car;
+                    }
+                    else
+                    {
+                        Console.WriteLine(" This isn't correct.")
+                    }
+
+            }
+            Console.WriteLine(" FindMinMax(" + MMInt + ") is: " + MinMax(MMInt));
+        }
 
 
 
@@ -432,6 +458,10 @@ class Challenges
     public static string MonthName(int M)
     {
         return DateAndTime.MonthName(M);
+    }
+    public static int MinMax(int MM)
+    {
+        return 
     }
 }
 
