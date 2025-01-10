@@ -236,7 +236,7 @@ class Challenges
         {
             Console.WriteLine("Nice, now we are going to add Hello to the end of whatever you input. Please input a name of other word.");
             string number11 = Console.ReadLine();
-            Console.WriteLine(" HelloName (" + number11 + ") --> " + ( "Hello " + number11));
+            Console.WriteLine(" HelloName (" + number11 + ") --> " + ("Hello " + number11));
         }
         else if (response == "animals")
         {
@@ -281,8 +281,8 @@ class Challenges
             int numberToUse17 = int.Parse(number17);
 
             Console.WriteLine(" FootballPoints ( " + number15 + ", " + number16 + ", " + number17 + ", ) --> " + FootballPoint(numberToUse15, numberToUse16, numberToUse17));
-            
-        
+
+
         }
         else if (response == "MonthName")
         {
@@ -297,8 +297,8 @@ class Challenges
                 if (int.TryParse(superS, out _))
                 {
                     int car = int.Parse(superS);
-                    if (car > 0 && car <= 12) 
-                    
+                    if (car > 0 && car <= 12)
+
                     {
                         valid1 = true;
                         monthInt = car;
@@ -343,27 +343,92 @@ class Challenges
                         Console.WriteLine(" This isn't correct.")
                     }
 
+                }
+                Console.WriteLine(" FindMinMax(" + MMInt + ") is: " + MinMax(MMInt));
+
+
             }
-            Console.WriteLine(" FindMinMax(" + MMInt + ") is: " + MinMax(MMInt));
-        }
+             
+
+
 
 
 
         else if (response == "Finito")
-        {
-            return;
+            {
+                return;
+            }
+            else
+            {
+                Console.WriteLine("This is not a valid Function.");
+
+            }
+            Start();
+
+
         }
-        else
+        else if (response == "AdSum")
         {
-            Console.WriteLine("This is not a valid Function.");
-            
+            Console.WriteLine(" We now are going to find the absolute value of numbers that you input. Please enter a number.");
+            int monthInt = new List<int>();
+
+            bool valid1 = false;
+            while (!valid1)
+            {
+                var superS = Console.ReadLine();
+                if (int.TryParse(superS, out _))
+                {
+                    int car = int.Parse(superS);
+
+
+
+                    valid1 = true;
+                    monthInt = car;
+
+
+                }
+                else
+                {
+                    Console.WriteLine(" Not a number try again.");
+
+                }
+
+
+            }
+            bool malice1 = false;
+            while (!malice1)
+            {
+                Console.WriteLine(" Please enter another number, or enter 'done' to end");
+                var superS = Console.ReadLine();
+                if (superS == "done")
+                {
+                    malice1 = true
+                }
+                else
+                {
+                    if (int.TryParse(superS, out _))
+                    {
+                        int car = int.Parse(superS);
+
+
+
+                        valid1 = true;
+                        monthInt = car;
+
+
+                    }
+                    else
+                    {
+                        Console.WriteLine(" Not a number try again.");
+
+                    }
+                }
+                
+
+
+            }
+            Console.WriteLine(" AdSum(" + arrayString(monthInt.ToArray()) + ")")
         }
-        Start();
-        
-
-    }
-
-
 
 
     public static int Sum(int number1, int number2)
@@ -459,9 +524,42 @@ class Challenges
     {
         return DateAndTime.MonthName(M);
     }
-    public static int MinMax(int MM)
+    public static int[] MinMax(int[] MM)
     {
-        return 
+        var returnList = new List<int>();
+        returnList.Add(MM.Min());
+        returnList.Add(MM.Max());
+
+        return returnList.ToArray();
+    }
+    public static int AdSum(int[] input)
+    {
+        int re = 0;
+        foreach(int i in input)
+        {
+            re += Math.Abs(i);
+
+        }
+        return re;
+    }
+    public static string arrayString(int[] input)
+    {
+        string thing = "";
+        bool more = true;
+        foreach (int i in input)
+        {
+            if (more)
+            {
+                more = false;
+            }
+            else
+            {
+                thing = thing + ", ";
+            }
+            thing = thing + i.ToString();
+
+        }
+        return thing;
     }
 }
 
