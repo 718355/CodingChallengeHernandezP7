@@ -17,7 +17,7 @@ class Challenges
     }
     public static void Start()
     {
-        
+
 
         //Welcome the user to my program//
         Console.WriteLine("Please choose a function \n To see a list of all functions, please type 'Functions'\n To exit out of this program, type in 'Finito'");
@@ -25,7 +25,7 @@ class Challenges
         if (response == "Functions")
         {
             Console.WriteLine("Plus\nConvert\nAddOne\nPower Of Curcuit\nAgeCalc\nTriARea\nTrue Or False\nSum True or False\n2IntTF\nSomething\nReverse Bool\nHours To Sec\nPolygonAngle\nnameString" +
-                "\nTrueTrueTrue\nCalcPoint\nCalcPerimeter\nHelloName\nanimals\nBallPoint\nMonthName\nMINMAX\n");
+                "\nTrueTrueTrue\nCalcPoint\nCalcPerimeter\nHelloName\nanimals\nBallPoint\nMonthName\nMINMAX\nAdSum\n");
             Start();
         }
         else if (response == "Plus")
@@ -322,55 +322,8 @@ class Challenges
         else if (response == "MINMAX")
         {
             // Challenge 22 //
-            Console.WriteLine(" We now are going to find the min and max numbers from the numbers you input. Please enter a bunch of numbers with commaas between each. ");
-            int MMInt = 1;
-
-            bool valid1 = false;
-            while (!valid1)
-            {
-                var superS = Console.ReadLine();
-                if (int.TryParse(superS, out _))
-                {
-                    int car = int.Parse(superS);
-                    if (car > 0)
-
-                    {
-                        valid1 = true;
-                        MMInt = car;
-                    }
-                    else
-                    {
-                        Console.WriteLine(" This isn't correct.")
-                    }
-
-                }
-                Console.WriteLine(" FindMinMax(" + MMInt + ") is: " + MinMax(MMInt));
-
-
-            }
-             
-
-
-
-
-
-        else if (response == "Finito")
-            {
-                return;
-            }
-            else
-            {
-                Console.WriteLine("This is not a valid Function.");
-
-            }
-            Start();
-
-
-        }
-        else if (response == "AdSum")
-        {
-            Console.WriteLine(" We now are going to find the absolute value of numbers that you input. Please enter a number.");
-            int monthInt = new List<int>();
+            Console.WriteLine(" We now are going to find the min and max numbers from the numbers you input. Please enter a number. ");
+            var monthInt = new List<int>();
 
             bool valid1 = false;
             while (!valid1)
@@ -383,7 +336,7 @@ class Challenges
 
 
                     valid1 = true;
-                    monthInt = car;
+                    monthInt.Add(car);
 
 
                 }
@@ -402,7 +355,7 @@ class Challenges
                 var superS = Console.ReadLine();
                 if (superS == "done")
                 {
-                    malice1 = true
+                    malice1 = true;
                 }
                 else
                 {
@@ -413,7 +366,7 @@ class Challenges
 
 
                         valid1 = true;
-                        monthInt = car;
+                        monthInt.Add(car);
 
 
                     }
@@ -423,12 +376,97 @@ class Challenges
 
                     }
                 }
-                
+
 
 
             }
-            Console.WriteLine(" AdSum(" + arrayString(monthInt.ToArray()) + ")")
+            Console.WriteLine(" MinMax(" + arrayString(monthInt.ToArray()) + ") -> " + arrayString(MinMax(monthInt.ToArray())));
+
         }
+
+        else if (response == "AdSum")
+        {
+            Console.WriteLine(" We now are going to find the absolute value of numbers that you input. Please enter a number.");
+            var monthInt = new List<int>();
+
+            bool valid1 = false;
+            while (!valid1)
+            {
+                var superS = Console.ReadLine();
+                if (int.TryParse(superS, out _))
+                {
+                    int car = int.Parse(superS);
+
+
+
+                    valid1 = true;
+                    monthInt.Add(car);
+
+
+                }
+                else
+                {
+                    Console.WriteLine(" Not a number try again.");
+
+                }
+
+
+            }
+            bool malice1 = false;
+            while (!malice1)
+            {
+                Console.WriteLine(" Please enter another number, or enter 'done' to end");
+                var superS = Console.ReadLine();
+                if (superS == "done")
+                {
+                    malice1 = true;
+                    }
+                else
+                {
+                    if (int.TryParse(superS, out _))
+                    {
+                        int car = int.Parse(superS);
+
+
+
+                        valid1 = true;
+                        monthInt.Add(car);
+
+
+                    }
+                    else
+                    {
+                        Console.WriteLine(" Not a number try again.");
+
+                    }
+                }
+
+
+
+            }
+            Console.WriteLine(" AdSum(" + arrayString(monthInt.ToArray()) + ") -> " + AdSum(monthInt.ToArray()));
+        }
+
+
+
+
+
+
+
+        else if (response == "Finito")
+        {
+            return;
+        }
+        else
+        {
+            Console.WriteLine("This is not a valid Function.");
+
+        }
+        Start();
+    }
+
+
+        
 
 
     public static int Sum(int number1, int number2)
