@@ -25,7 +25,7 @@ class Challenges
         if (response == "Functions")
         {
             Console.WriteLine("Plus\nConvert\nAddOne\nPower Of Curcuit\nAgeCalc\nTriARea\nTrue Or False\nSum True or False\n2IntTF\nSomething\nReverse Bool\nHours To Sec\nPolygonAngle\nnameString" +
-                "\nTrueTrueTrue\nCalcPoint\nCalcPerimeter\nHelloName\nanimals\nBallPoint\nMonthName\nMINMAX\nAdSum\n");
+                "\nTrueTrueTrue\nCalcPoint\nCalcPerimeter\nHelloName\nanimals\nBallPoint\nMonthName\nMINMAX\nAdSum\nCalcEx\n");
             Start();
         }
         else if (response == "Plus")
@@ -446,6 +446,51 @@ class Challenges
             }
             Console.WriteLine(" AdSum(" + arrayString(monthInt.ToArray()) + ") -> " + AdSum(monthInt.ToArray()));
         }
+        else if (response == "CalcEx")
+        {
+            Console.WriteLine("We now are going to use the exponent calc. Please enter a base.");
+            int monthInt = 1;
+            int expInt = 1;
+
+            bool valid1 = false;
+            while (!valid1)
+            {
+                var superS = Console.ReadLine();
+                if (int.TryParse(superS, out _))
+                {
+
+                    int car = int.Parse(superS);
+                    valid1 = true;
+                    monthInt = car;
+                }
+                else
+                {
+                    Console.WriteLine(" Not right, try again.");
+
+                }
+
+            }
+            Console.WriteLine("Now give me a exponent number.");
+            bool valid5 = false;
+            while (!valid5)
+            {
+                var superS = Console.ReadLine();
+                if (int.TryParse(superS, out _))
+                {
+
+                    int car = int.Parse(superS);
+                    valid5 = true;
+                    expInt = car;
+                }
+                else
+                {
+                    Console.WriteLine(" Not right, try again.");
+
+                }
+
+            }
+            Console.WriteLine(" CalcEx(" + monthInt + ", " + expInt + ") -> " + CalcEx(monthInt, expInt));
+        }
 
 
 
@@ -598,6 +643,10 @@ class Challenges
 
         }
         return thing;
+    }
+    public static float CalcEx(float baseH, float exp)
+    {
+        return MathF.Pow(baseH, exp);
     }
 }
 
