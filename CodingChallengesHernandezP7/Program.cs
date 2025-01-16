@@ -25,7 +25,7 @@ class Challenges
         if (response == "Functions")
         {
             Console.WriteLine("Plus\nConvert\nAddOne\nPower Of Curcuit\nAgeCalc\nTriARea\nTrue Or False\nSum True or False\n2IntTF\nSomething\nReverse Bool\nHours To Sec\nPolygonAngle\nnameString" +
-                "\nTrueTrueTrue\nCalcPoint\nCalcPerimeter\nHelloName\nanimals\nBallPoint\nMonthName\nMINMAX\nAdSum\nCalcEx\n");
+                "\nTrueTrueTrue\nCalcPoint\nCalcPerimeter\nHelloName\nanimals\nBallPoint\nMonthName\nMINMAX\nAdSum\nCalcEx\nMultByLength\n");
             Start();
         }
         else if (response == "Plus")
@@ -491,13 +491,21 @@ class Challenges
             }
             Console.WriteLine(" CalcEx(" + monthInt + ", " + expInt + ") -> " + CalcEx(monthInt, expInt));
         }
+        else if (response == "MultByLength")
+        {
+            Console.WriteLine("We now are going to multiply by length. Please enter numbers.");
+            var number19 = Console.ReadLine();
 
+            int numberToUse19 = int.Parse(number19);
 
+            Console.WriteLine("Now another one.");
 
+            var number20 = Console.ReadLine();
 
+            int numberToUse20 = int.Parse(number20);
 
-
-
+            Console.WriteLine(" MultByLength( " + number19 + ", " + number20 + ",) --> " + MultByLength(numberToUse19, numberToUse20));
+        }
         else if (response == "Finito")
         {
             return;
@@ -647,6 +655,11 @@ class Challenges
     public static float CalcEx(float baseH, float exp)
     {
         return MathF.Pow(baseH, exp);
+    }
+    public static Tuple<int, int> MultByLength(int number19, int number20)
+    {
+        var tuple = new Tuple<int, int>(number19 * 2, number20 * 2);
+        return tuple;
     }
 }
 
