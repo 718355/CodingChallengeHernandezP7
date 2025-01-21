@@ -3,6 +3,7 @@ using System.ComponentModel.Design;
 using System.Runtime.CompilerServices;
 using System.Runtime.ConstrainedExecution;
 using System.Security.Cryptography.X509Certificates;
+using System.Text.Json.Serialization.Metadata;
 using Microsoft.VisualBasic;
 class Challenges
 {
@@ -20,15 +21,15 @@ class Challenges
 
 
         //Welcome the user to my program//
-        Console.WriteLine("Please choose a function \n To see a list of all functions, please type 'Functions'\n To exit out of this program, type in 'Finito'");
+        Console.WriteLine("Please choose a function\n To exit out of this program, type in 'Finito'\n Here are all functions available.");
+
+        Console.WriteLine("Plus\nConvert\nAddOne\nPower Of Curcuit\nAgeCalc\nTriARea\nTrue Or False\nSum True or False\n2IntTF\nSomething\nReverse Bool\nHours To Sec\nPolygonAngle\nnameString" +
+                "\nTrueTrueTrue\nCalcPoint\nCalcPerimeter\nHelloName\nanimals\nBallPoint\nMonthName\nMINMAX\nAdSum\nCalcEx\nMultByLength\nHammingDist\n");
         var response = Console.ReadLine();
-        if (response == "Functions")
-        {
-            Console.WriteLine("Plus\nConvert\nAddOne\nPower Of Curcuit\nAgeCalc\nTriARea\nTrue Or False\nSum True or False\n2IntTF\nSomething\nReverse Bool\nHours To Sec\nPolygonAngle\nnameString" +
-                "\nTrueTrueTrue\nCalcPoint\nCalcPerimeter\nHelloName\nanimals\nBallPoint\nMonthName\nMINMAX\nAdSum\nCalcEx\nMultByLength\n");
-            Start();
-        }
-        else if (response == "Plus")
+
+
+
+        if (response == "Plus")
         {
             // CHALLENGE 1 //
 
@@ -506,6 +507,34 @@ class Challenges
 
             Console.WriteLine(" MultByLength( " + number19 + ", " + number20 + ",) --> " + MultByLength(numberToUse19, numberToUse20));
         }
+        else if (response == "HammingDist")
+        {
+            Console.WriteLine("We now are going to compute the hamming distance from two strings. Please enter the first string.");
+
+            string first = Console.ReadLine();
+            string second = "";
+
+            Console.WriteLine("Now give me another string of letters and the same amount of letters.");
+            bool valid5 = false;
+            while (!valid5)
+            {
+                string superS = Console.ReadLine();
+                if (superS.Length == first.Length)
+                {
+
+                    second = superS;
+                    valid5 = true;
+                }
+                else
+                {
+                    Console.WriteLine(" No, try again with same amount of characters.");
+
+                }
+            }
+                Console.WriteLine($"HammingDist({first}, {second}) --> {HammingDist(first, second)}");
+
+        }
+
         else if (response == "Finito")
         {
             return;
@@ -660,6 +689,21 @@ class Challenges
     {
         var tuple = new Tuple<int, int>(number19 * 2, number20 * 2);
         return tuple;
+    }
+    public static int HammingDist(string k, string t)
+    {
+        char[] kchar = k.ToCharArray();
+        char[] tchar = t.ToCharArray();
+        int dist = 0;
+        for (int i = 0; i < kchar.Length; i++)
+        {
+            if (kchar[i] != tchar[i])
+            {
+                dist++;
+            }
+            
+        }
+        return dist;
     }
 }
 
