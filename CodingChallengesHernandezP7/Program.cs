@@ -24,7 +24,7 @@ class Challenges
         Console.WriteLine("Please choose a function\n To exit out of this program, type in 'Finito'\n Here are all functions available.");
 
         Console.WriteLine("Plus\nCon\nAdd\nCurcuit\nAge\nTri\nTralse\nSumTralse\n2IntTF\nSomething\nReverse\nHoursSec\nPolygon\nnameString" +
-                "\nTrue\nPoint\nPerimeter\nHello\nanimals\nBall\nMonth\nMINMAX\nAdSum\nCalcEx\nMultLength\nHammDist\n");
+                "\nTrue\nPoint\nPerimeter\nHello\nanimals\nBall\nMonth\nMINMAX\nAdSum\nCalcEx\nMultLength\nHammDist\nShuffleName\n");
         var response = Console.ReadLine();
 
 
@@ -534,6 +534,19 @@ class Challenges
                 Console.WriteLine($"HammingDist({first}, {second}) --> {HammingDist(first, second)}");
 
         }
+        else if (response == "ShuffleName")
+        {
+            Console.WriteLine("we now are going to shuffle the name you input pleas input the first name.");
+
+            string number21 = Console.ReadLine();
+
+            Console.WriteLine("Now enter the last name.");
+
+            string number22 = Console.ReadLine();
+
+            Console.WriteLine(" NameShuffle( " + number21 + ", " + number22 + ", ) --> " + NameShuffle(number21, number22));
+
+        }
 
         else if (response == "Finito")
         {
@@ -704,6 +717,10 @@ class Challenges
             
         }
         return dist;
+    }
+    public static string NameShuffle(string number21, string number22)
+    {
+        return number22 + " " + number21;
     }
 }
 
