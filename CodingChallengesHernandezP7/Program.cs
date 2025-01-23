@@ -23,8 +23,8 @@ class Challenges
         //Welcome the user to my program//
         Console.WriteLine("Please choose a function\n To exit out of this program, type in 'Finito'\n Here are all functions available.");
 
-        Console.WriteLine("Plus\nConvert\nAddOne\nPower Of Curcuit\nAgeCalc\nTriARea\nTrue Or False\nSum True or False\n2IntTF\nSomething\nReverse Bool\nHours To Sec\nPolygonAngle\nnameString" +
-                "\nTrueTrueTrue\nCalcPoint\nCalcPerimeter\nHelloName\nanimals\nBallPoint\nMonthName\nMINMAX\nAdSum\nCalcEx\nMultByLength\nHammingDist\n");
+        Console.WriteLine("Plus\nCon\nAdd\nCurcuit\nAge\nTri\nTralse\nSumTralse\n2IntTF\nSomething\nReverse\nHoursSec\nPolygon\nnameString" +
+                "\nTrue\nPoint\nPerimeter\nHello\nanimals\nBall\nMonth\nMINMAX\nAdSum\nCalcEx\nMultLength\nHammDist\n");
         var response = Console.ReadLine();
 
 
@@ -42,7 +42,7 @@ class Challenges
             Console.WriteLine("The sum of the number: " + number1 + " and the number: " + number2 + " is equal to: " + Sum(numberToUse1, numberToUse2));
             Sum(numberToUse1, numberToUse2);
         }
-        else if (response == "Convert")
+        else if (response == "Con")
         {
             // CHALLENGE 2 //
 
@@ -51,7 +51,7 @@ class Challenges
             int numberToUse3 = int.Parse(number3);
             Console.WriteLine(" If I convert " + number3 + " minutes to seconds. I got " + Convert(numberToUse3) + " Seconds. ");
         }
-        else if (response == "AddOne")
+        else if (response == "Add")
         {
             // CHALLENGE 3 //
 
@@ -60,7 +60,7 @@ class Challenges
             int numberToUse4 = int.Parse(number4);
             Console.WriteLine(" If " + number4 + " is incremented by 1, the result is " + (numberToUse4 + 1) + ".");
         }
-        else if (response == "Power Of Curcuit")
+        else if (response == "Curcuit")
         {
             // CHALLENGE 4 //
 
@@ -72,7 +72,7 @@ class Challenges
             int currentToUse = int.Parse(current);
             Console.WriteLine("If " + voltage + " is multiplied by " + current + ", the result is " + CircuitPower(voltageToUse, currentToUse) + ".");
         }
-        else if (response == "AgeCalc")
+        else if (response == "Age")
         {
             // CHALLENGE 5 //
 
@@ -82,7 +82,7 @@ class Challenges
 
             Console.WriteLine("If I convert " + years + " years to days. I get " + CalcAge(yearsToUse) + ".");
         }
-        else if (response == "TriArea")
+        else if (response == "Tri")
         {
             // CHALLENGE 6 //
 
@@ -94,7 +94,7 @@ class Challenges
             float heightToUse = float.Parse(height);
             Console.WriteLine("If " + baseo + " is multiplied by " + height + " and halved, the result is " + triArea(baseToUse, heightToUse) + ".");
         }
-        else if (response == "True Or False")
+        else if (response == "Tralse")
         {
             // CHALLENGE 7 //
 
@@ -103,7 +103,7 @@ class Challenges
             int number5ToUse = int.Parse(number5);
             Console.WriteLine("If " + number5 + " is used " + ", the result is " + lessThanOrEqualToZero(number5ToUse) + ".");
         }
-        else if (response == "Sum True or False")
+        else if (response == "SumTralse")
         {
             // CHALLENGE 8 //
 
@@ -136,7 +136,7 @@ class Challenges
             Console.WriteLine(GiveMeSomething(responsej) + ".");
 
         }
-        else if (response == "Reverse Bool")
+        else if (response == "Reverse")
         {
             // CHALLENGE 11 //
 
@@ -147,7 +147,7 @@ class Challenges
             Console.WriteLine(Reverse(responseToUse) + ".");
 
         }
-        else if (response == "Hours To Sec")
+        else if (response == "HoursSec")
         {
             // CHALLENGE 12 //
 
@@ -156,7 +156,7 @@ class Challenges
             float hoursToUse = float.Parse(hours);
             Console.WriteLine(" If I convert " + hours + " hours to seconds. I get " + howmanySeconds(hoursToUse) + " seconds. ");
         }
-        else if (response == "PolygonAngle")
+        else if (response == "Polygon")
         {
             // CHALLENGE 13 //
             Console.WriteLine("Okay, now we are going find the total sum of internal angles from a certain amount of sides. \n Please input a number of sides.");
@@ -187,7 +187,7 @@ class Challenges
             string nameString = Console.ReadLine();
             Console.WriteLine(" If " + nameString + " is used. I get " + nameStringH(nameString) + " . ");
         }
-        else if (response == "TrueTrueTrue")
+        else if (response == "True")
         {
             // Challenge 15 //
             Console.WriteLine("Nice, now we are going to use the operator to determine if two boolean values are true. Please type in true or false.");
@@ -201,7 +201,7 @@ class Challenges
 
 
         }
-        else if (response == "CalcPoint")
+        else if (response == "Point")
         {
             // Challenge 16 //
             Console.WriteLine("Okay, we now are going to calculate the number of 3-pointers and 2-pointers scored to find the final points, Please enter a number op two-pointers.");
@@ -217,7 +217,7 @@ class Challenges
 
             Console.WriteLine(" points ( " + number7 + ", " + number8 + ") --> " + CalcPoint(numberToUse7, numberToUse8));
         }
-        else if (response == "CalcPerimeter")
+        else if (response == "Perimeter")
         {
             // Challenge 18 //
             Console.WriteLine("Okay, we now are going to calculate the perimeter of a rectangle based on length and width, Please enter a number for length.");
@@ -233,7 +233,7 @@ class Challenges
 
             Console.WriteLine(" Perimeter ( " + number9 + ", " + number10 + ") --> " + CalcPerimeter(numberToUse9, numberToUse10));
         }
-        else if (response == "HelloName")
+        else if (response == "Hello")
         {
             Console.WriteLine("Nice, now we are going to add Hello to the end of whatever you input. Please input a name of other word.");
             string number11 = Console.ReadLine();
@@ -261,7 +261,7 @@ class Challenges
 
             Console.WriteLine(" animals ( " + number12 + ", " + number13 + ", " + number14 + ", ) --> " + animals(numberToUse12, numberToUse13, numberToUse14));
         }
-        else if (response == "BallPoint")
+        else if (response == "Ball")
         {
             // Challenge 20 //
             Console.WriteLine("Okay, we now are going to calculate the number of wins you can get when enter a number of draws and losses. PLease enter a number of wins.");
@@ -285,7 +285,7 @@ class Challenges
 
 
         }
-        else if (response == "MonthName")
+        else if (response == "Month")
         {
             // Challenge 21 //
             Console.WriteLine(" We now are going to use the months calculation. PLease enter a number 1 to 12. ");
@@ -492,7 +492,7 @@ class Challenges
             }
             Console.WriteLine(" CalcEx(" + monthInt + ", " + expInt + ") -> " + CalcEx(monthInt, expInt));
         }
-        else if (response == "MultByLength")
+        else if (response == "MultLength")
         {
             Console.WriteLine("We now are going to multiply by length. Please enter numbers.");
             var number19 = Console.ReadLine();
@@ -507,7 +507,7 @@ class Challenges
 
             Console.WriteLine(" MultByLength( " + number19 + ", " + number20 + ",) --> " + MultByLength(numberToUse19, numberToUse20));
         }
-        else if (response == "HammingDist")
+        else if (response == "HammDist")
         {
             Console.WriteLine("We now are going to compute the hamming distance from two strings. Please enter the first string.");
 
