@@ -24,7 +24,7 @@ class Challenges
         Console.WriteLine("Please choose a function\n To exit out of this program, type in 'Finito'\n Here are all functions available.");
 
         Console.WriteLine("Plus\nCon\nAdd\nCurcuit\nAge\nTri\nTralse\nSumTralse\n2IntTF\nSomething\nReverse\nHoursSec\nPolygon\nnameString" +
-                "\nTrue\nPoint\nPerimeter\nHello\nanimals\nBall\nMonth\nMINMAX\nAdSum\nCalcEx\nMultLength\nHammDist\nShuffleName\n");
+                "\nTrue\nPoint\nPerimeter\nHello\nanimals\nBall\nMonth\nMINMAX\nAdSum\nCalcEx\nMultLength\nHammDist\nShuffleName\nSmaller\n");
         var response = Console.ReadLine();
 
 
@@ -384,9 +384,9 @@ class Challenges
             Console.WriteLine(" MinMax(" + arrayString(monthInt.ToArray()) + ") -> " + arrayString(MinMax(monthInt.ToArray())));
 
         }
-
         else if (response == "AdSum")
         {
+            // Chalklenge 23 //
             Console.WriteLine(" We now are going to find the absolute value of numbers that you input. Please enter a number.");
             var monthInt = new List<int>();
 
@@ -449,6 +449,7 @@ class Challenges
         }
         else if (response == "CalcEx")
         {
+            // Challenge 24 //
             Console.WriteLine("We now are going to use the exponent calc. Please enter a base.");
             int monthInt = 1;
             int expInt = 1;
@@ -494,6 +495,7 @@ class Challenges
         }
         else if (response == "MultLength")
         {
+            // Challenge 25 //
             Console.WriteLine("We now are going to multiply by length. Please enter numbers.");
             var number19 = Console.ReadLine();
 
@@ -509,6 +511,7 @@ class Challenges
         }
         else if (response == "HammDist")
         {
+            // Challenge 26 //
             Console.WriteLine("We now are going to compute the hamming distance from two strings. Please enter the first string.");
 
             string first = Console.ReadLine();
@@ -536,6 +539,7 @@ class Challenges
         }
         else if (response == "ShuffleName")
         {
+            // Challenge 27 //
             Console.WriteLine("we now are going to shuffle the name you input pleas input the first name.");
 
             string number21 = Console.ReadLine();
@@ -547,7 +551,22 @@ class Challenges
             Console.WriteLine(" NameShuffle( " + number21 + ", " + number22 + ", ) --> " + NameShuffle(number21, number22));
 
         }
+        else if (response == "Smaller")
+        {
+            // Challenge 28 //
+            Console.WriteLine("we now are going to find the smaller number. PLease deposit the first number.");
 
+            var number23 = Console.ReadLine();
+            int numberfor23 = int.Parse(number23);
+
+
+            Console.WriteLine("Now deposit the second number.");
+
+            var number24 = Console.ReadLine();
+            int numberfor24 = int.Parse(number24);
+
+            Console.WriteLine(" SmallerNumber( " + number23 + ", " + number24 + ", ) --> " + SmallerNumber(numberfor23, numberfor24));
+        }
         else if (response == "Finito")
         {
             return;
@@ -721,6 +740,17 @@ class Challenges
     public static string NameShuffle(string number21, string number22)
     {
         return number22 + " " + number21;
+    }
+    public static int SmallerNumber(int number23, int number24)
+    {
+        if (number23 > number24)
+        {
+            return number24;
+        }
+        else
+        {
+            return number23;
+        }
     }
 }
 
