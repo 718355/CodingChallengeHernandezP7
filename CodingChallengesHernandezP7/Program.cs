@@ -24,7 +24,7 @@ class Challenges
         Console.WriteLine("Please choose a function\n To exit out of this program, type in 'Finito'\n Here are all functions available.");
 
         Console.WriteLine("Plus\nCon\nAdd\nCurcuit\nAge\nTri\nTralse\nSumTralse\n2IntTF\nSomething\nReverse\nHoursSec\nPolygon\nnameString" +
-                "\nTrue\nPoint\nPerimeter\nHello\nanimals\nBall\nMonth\nMINMAX\nAdSum\nCalcEx\nMultLength\nHammDist\nShuffleName\nSmaller\n");
+                "\nTrue\nPoint\nPerimeter\nHello\nanimals\nBall\nMonth\nMINMAX\nAdSum\nCalcEx\nMultLength\nHammDist\nShuffleName\nSmaller\nFactorial\n");
         var response = Console.ReadLine();
 
 
@@ -567,6 +567,13 @@ class Challenges
 
             Console.WriteLine(" SmallerNumber( " + number23 + ", " + number24 + ", ) --> " + SmallerNumber(numberfor23, numberfor24));
         }
+        else if (response == "Factorial")
+        {
+            Console.WriteLine("We now are going to find the factorial of an integer. Please input an integer.");
+            var number25 = Console.ReadLine();
+            int numberToUse25 = int.Parse(number25);
+            Console.WriteLine("Factorial(" + number25 + ") --> " + Facotrial(numberToUse25));
+        }
         else if (response == "Finito")
         {
             return;
@@ -751,6 +758,15 @@ class Challenges
         {
             return number23;
         }
+    }
+    public static int Facotrial(int j)
+    {
+        int output = 1;
+        for(int i = j; i > 0; i--)
+        {
+            output *= i;
+        }
+        return output;
     }
 }
 
