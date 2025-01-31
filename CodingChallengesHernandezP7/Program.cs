@@ -24,7 +24,7 @@ class Challenges
         Console.WriteLine("Please choose a function\n To exit out of this program, type in 'Finito'\n Here are all functions available.");
 
         Console.WriteLine("Plus\nCon\nAdd\nCurcuit\nAge\nTri\nTralse\nSumTralse\n2IntTF\nSomething\nReverse\nHoursSec\nPolygon\nnameString" +
-                "\nTrue\nPoint\nPerimeter\nHello\nanimals\nBall\nMonth\nMINMAX\nAdSum\nCalcEx\nMultLength\nHammDist\nShuffleName\nSmaller\nFactorial\n");
+                "\nTrue\nPoint\nPerimeter\nHello\nanimals\nBall\nMonth\nMINMAX\nAdSum\nCalcEx\nMultLength\nHammDist\nShuffleName\nSmaller\nFactorial\nVowels\n");
         var response = Console.ReadLine();
 
 
@@ -569,12 +569,28 @@ class Challenges
         }
         else if (response == "Factorial")
         {
+            // Challenge 30 //
             Console.WriteLine("We now are going to find the factorial of an integer. Please input an integer.");
             var number25 = Console.ReadLine();
             int numberToUse25 = int.Parse(number25);
             Console.WriteLine("Factorial(" + number25 + ") --> " + Facotrial(numberToUse25));
         }
-        else if (response == "Finito")
+        else if (response == "Vowels")
+        {
+            Console.WriteLine("We now are going to finjd out how many vowels are in a word. Please enter any word.");
+
+            string userInput = Console.ReadLine();
+
+            if (!string.IsNullOrEmpty(userInput))
+            {
+                Console.WriteLine("CountVowels(\"" + userInput + "\") --> " + CountVowels(userInput));
+            }
+            else
+            {
+                Console.WriteLine("Invalid input. Please put in a actual word.");
+            }
+        }
+        else if (response == "Terminate")
         {
             return;
         }
@@ -767,6 +783,18 @@ class Challenges
             output *= i;
         }
         return output;
+    }
+    public static int CountVowels(string input)
+    {
+        int count = 0;
+        input = input.ToLower();
+
+        foreach (char c in input)
+        {
+            if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u')
+                count++;
+        }
+        return count;
     }
 }
 
